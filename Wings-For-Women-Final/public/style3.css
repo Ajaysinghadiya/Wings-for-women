@@ -1,0 +1,188 @@
+/* General Body Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable scrolling */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: #ff6f61;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff6f61;
+}
+
+.login-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e55a50;
+}
+
+/* Content Area Styles */
+.content {
+    margin-top: 60px;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+/* Section Styles */
+#login {
+    margin-top: 90px;
+    padding: 20px;
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#signup-form , #login-form{
+    padding: 20px;
+    animation: slideInLeft 0.5s ease-out;
+}
+
+#login-img {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideInRight 0.5s ease-out;
+}
+
+#login-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#login-img img:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exp{
+    padding: 10px 50px;
+    padding-bottom: 20px;
+}
+/* Form Styles */
+.form-group label {
+    color: #333;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.submit-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e55a50;
+}
+
+.extra {
+    margin-top: 10px; /* Reduced gap */
+}
+
+.extra a {
+    color: #ff6f61;
+}
+
+
+/* Checkbox Styles */
+.checkbox label {
+    color: #333;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto;
+    }
+
+    .content {
+        margin-top: 60px;
+        height: auto;
+    }
+
+    #login {
+        height: auto;
+        padding: 20px;
+    }
+
+    #signup-form, #login-img {
+        animation: none;
+    }
+}
